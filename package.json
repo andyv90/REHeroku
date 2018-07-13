@@ -31,8 +31,7 @@
     "start": "node index.js",
     "format": "prettier --write '*.js'",
     "lint": "eslint --fix '*.js'",
-    "heroku-postbuild": "cd client && npm && npm run build"
-
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "prettier": {
     "printWidth": 80,

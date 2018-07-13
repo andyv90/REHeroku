@@ -30,7 +30,9 @@
   "scripts": {
     "start": "node index.js",
     "format": "prettier --write '*.js'",
-    "lint": "eslint --fix '*.js'"
+    "lint": "eslint --fix '*.js'",
+    "heroku-postbuild": "cd client && yarn && yarn run build"
+
   },
   "prettier": {
     "printWidth": 80,

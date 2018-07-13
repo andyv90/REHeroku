@@ -5,6 +5,8 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const winston = require('winston');
+const path = require('path');
+
 
 assert(process.env.PORT, 'process.env.PORT is missing.');
 
@@ -31,6 +33,8 @@ app.use(function (req, res, next) {
 
 
 app.set('port', process.env.PORT);
+
+app.use('/', express.static(path.join(__dirname, 'REheroku')));
 
 app.use(cors({
   origin: (origin, callback) => {

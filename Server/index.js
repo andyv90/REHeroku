@@ -38,7 +38,7 @@ app.use('/', express.static(path.join(__dirname, 'REheroku')));
 
 app.use(cors({
   origin: (origin, callback) => {
-    if ((process.env.CORS_WHITELIST || '').split(',').includes(origin)) {
+    if ((process.env.CORS_WHITELIST || '5000').split(',').includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS.'));
